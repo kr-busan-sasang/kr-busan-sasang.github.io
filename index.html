@@ -122,35 +122,486 @@
   ]
 }
   </script>
-  <style>
-:root { --fg:#1a1a2e; --muted:#5c5c72; --accent:#2d5bff; --bg:#ffffff; --card:#f6f7fb; --line:#e6e8f0; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color:var(--fg); background:var(--bg); line-height:1.7; }
-main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-header { padding: 2rem 0 1rem; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem; }
-.eyebrow { color: var(--accent); font-weight: 600; margin: 0 0 .25rem; letter-spacing: .02em; }
-h1 { font-size: 2.4rem; margin: 0; }
-h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; padding-left: .6rem; border-left: 4px solid var(--accent); }
-section p { margin: .25rem 0 0; }
-ul { margin: .5rem 0 0; padding-left: 1.2rem; }
-li { margin: .25rem 0; }
-.facts, .symbols { list-style: none; padding: 1rem 1.2rem; background: var(--card); border-radius: 12px; }
-.faq details { border: 1px solid var(--line); border-radius: 10px; padding: .5rem .9rem; margin: .5rem 0; }
-.faq summary { cursor: pointer; font-weight: 600; }
-.faq details p { margin: .5rem 0 .25rem; color: var(--muted); }
-.sources { font-size: .9rem; color: var(--muted); }
-a { color: var(--accent); }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-</style>
+  <script id="region-data" type="application/json">
+{
+  "characteristics": "사상구는 약 20만 명이 거주하는 부산의 대표적 공업·물류 자치구로, 감전동을 중심으로 괘법동·덕포동·학장동에 걸쳐 부산 최대 규모의 사상공업지역이 자리합니다. 신발·기계·자동차부품·금속가공 등 부산 제조업의 뿌리가 이곳에 집중되어 있어 '부산 산업의 심장'으로 불려 왔습니다. 괘법동에는 부산산업용품유통단지와 이마트·홈플러스·르네시떼 같은 대형 유통시설이 몰려 서부산 상권의 중심을 이룹니다. 서부시외버스터미널이 영·호남과 수도권을 잇는 관문이어서 유동인구가 많고, 근래에는 노후 공업지역을 첨단산업·주거 복합으로 재생하는 도시재생 사업이 활발히 추진되고 있습니다. 공장과 물류로 상징되는 산업도시이면서도 낙동강 생태공원과 억새 명산을 함께 품은 점이 사상구만의 성격입니다.",
+  "coords": {
+    "lat": 35.1526,
+    "lng": 128.9911
+  },
+  "cultural_heritage": [
+    {
+      "description": "백양산 자락 운수사에 있는 부산에서 가장 오래된 목조건축으로, 임진왜란 때 소실된 뒤 인조 25년(1647) 착공해 효종 6년(1655)에 완공된 주심포계 맞배집이다. 보물로 지정된 조선 전기 불전 건축의 귀중한 유산이다.",
+      "name": "운수사 대웅전"
+    },
+    {
+      "description": "덕포동의 상강선대(할배당산)와 하강선대(할매당산)로 나뉜 당산으로, 1700년경 당집을 세워 낙동강변 마을의 풍년과 안녕을 빌어 온 주민 신앙의 상징이다.",
+      "name": "강선대(降仙臺)"
+    },
+    {
+      "description": "삼락동에 자리한 생활사 박물관으로, 사상의 옛 나루터·공업지역 형성과 주민들의 생활 변천사를 전시해 지역 정체성을 보존·공유하는 문화공간이다.",
+      "name": "사상생활사박물관"
+    },
+    {
+      "description": "삼락생태공원 일원 낙동강변을 무대로 열리는 사상구 대표 축제로, 로컬 문화예술 공연과 시민 참여 프로그램이 어우러지는 여름철 강변 문화행사다.",
+      "name": "사상강변축제"
+    },
+    {
+      "description": "인디 뮤지션과 지역 청년 예술가들의 공연·연습 공간으로, 사상의 산업지역에 문화 활력을 불어넣는 생활문화 거점이다.",
+      "name": "사상인디스테이션"
+    }
+  ],
+  "faq": [
+    {
+      "answer": "'사상(沙上)'은 '모래 위'라는 뜻으로, 낙동강이 실어 나른 모래벌 위에 마을이 들어섰고 옛 사천면(모래내)의 위쪽 지역이라는 데서 유래했습니다.",
+      "question": "사상구의 지명 '사상'은 무슨 뜻인가요?"
+    },
+    {
+      "answer": "부산광역시 사상구 학감대로 242(감전동)에 있으며, 도시철도 2호선 감전역·사상역에서 가깝습니다.",
+      "question": "사상구청은 어디에 있나요?"
+    },
+    {
+      "answer": "낙동강변의 삼락생태공원과 가을 억새로 유명한 승학산, 부산에서 가장 오래된 목조건축인 운수사 대웅전이 대표 명소로 꼽힙니다.",
+      "question": "사상구를 대표하는 명소는 어디인가요?"
+    },
+    {
+      "answer": "도시철도 2호선과 부산김해경전철이 만나고, 계획 중인 5호선의 기점이자 경부선 철도와 서부시외버스터미널이 인접해 서부산의 환승 중심지이기 때문입니다.",
+      "question": "사상역이 교통 요지로 불리는 이유는 무엇인가요?"
+    },
+    {
+      "answer": "감전동·학장동 일대의 사상공업지역은 부산 최대 규모로, 신발·기계·자동차부품·금속가공 등 부산 제조업의 중심지 역할을 합니다.",
+      "question": "사상구는 어떤 산업으로 유명한가요?"
+    },
+    {
+      "answer": "승학산 정상의 억새밭은 가을(10~11월)에 은빛으로 절정을 이루며, 가족 단위 등반 코스로 인기가 높습니다.",
+      "question": "승학산 억새는 언제 보러 가면 좋나요?"
+    }
+  ],
+  "geography_nature": "사상구는 부산 서부, 낙동강 본류가 남으로 흐르는 동안(東岸)의 충적 평야 위에 자리하며 서쪽으로 강 건너 강서구, 북쪽으로 북구, 동쪽으로 백양산 능선을 사이에 두고 부산진구와 접합니다. 남쪽에는 해발 496m의 승학산과 구덕산 자락이 병풍처럼 구를 감싸 산과 강 사이의 좁고 긴 저지대라는 독특한 지형을 이룹니다. 낙동강이 오랜 세월 실어 나른 모래와 흙이 쌓여 삼락동을 비롯한 넓은 강변 둔치와 습지가 발달했고, 이 일대가 삼락생태공원으로 조성되어 있습니다. 구를 관통하던 옛 물길과 모래벌은 '사상(모래 위)'이라는 지명의 근거가 되었으며 지금도 강변 저지대의 흔적이 곳곳에 남아 있습니다. 가장 넓은 동은 강변 둔치를 낀 삼락동이고 가장 좁은 동은 도심 밀집지역인 덕포1동으로, 자연 지형과 시가지가 뚜렷이 대비됩니다.",
+  "history": "사상 지역은 삼한시대 변한 거칠산국의 터전이었고 가야와 신라를 거치며 동래 사천면(沙川面)의 일부로 편제되었습니다. '사상'이라는 이름은 모래내(沙川)의 위쪽 지역, 즉 사천면 상단이라는 뜻에서 비롯되었으며 1914년 행정구역 개편 때 동래군 사상면으로 자리 잡았습니다. 낙동강 하구의 나루터인 사상나루는 김해·구포와 부산을 잇는 뱃길 요지로 오랫동안 번성했고, 강 건너 마을과의 왕래가 활발했습니다. 1963년 부산시 동래구에 편입되었다가 1975년 북부출장소, 1978년 북구 설치를 거쳐 성장했습니다. 1970년대부터 낙동강변 저지대에 사상공업지역이 대규모로 조성되면서 인구와 공장이 폭발적으로 늘어났습니다. 마침내 1995년 3월 1일 북구에서 분리·승격되어 오늘의 사상구가 출범했습니다.",
+  "intro": "사상구(沙上區)는 낙동강 하류 동안에 형성된 넓은 모래벌 위에 자리 잡아 '모래 위'라는 뜻의 지명을 얻은 부산의 대표적 산업·물류 거점입니다. 감전동·학장동·괘법동 일대에 부산 최대 규모의 사상공업지역이 펼쳐져 있고, 부산산업용품유통단지와 서부시외버스터미널이 서부산의 관문 역할을 맡고 있습니다. 도시철도 2호선과 부산김해경전철이 교차하는 사상역을 중심으로 사람과 물자가 모여드는 교통 결절지이기도 합니다. 한편으로는 낙동강변 삼락생태공원과 승학산 억새밭이 공장지대 옆에서 도시민에게 넉넉한 쉼터를 내어 주는 이중의 매력을 지닌 고장입니다. 옛 사상나루와 강선대 당산 신앙이 남아 강과 함께 살아온 주민들의 삶을 오늘까지 전하고 있습니다.",
+  "landmarks": [
+    {
+      "description": "낙동강변 둔치에 조성된 472만여 ㎡ 규모의 부산 최대 강변공원으로, 야생화단지·연꽃단지·습지생태원과 자전거길·지압도로가 어우러진 사상의 대표 나들이 명소다.",
+      "name": "삼락생태공원"
+    },
+    {
+      "description": "괘법동에 있는 서부산의 관문 터미널로 영·호남과 수도권을 잇는 시외버스가 오가며, 도시철도 2호선·경전철 사상역과 이어져 교통 결절지 역할을 한다.",
+      "name": "부산서부시외버스터미널"
+    },
+    {
+      "description": "괘법동 경전철 르네시떼역과 연결된 복합쇼핑·문화 시설로, 서부산 도심 상권의 랜드마크이자 시민들의 만남과 쇼핑 공간이다.",
+      "name": "사상 르네시떼(NC백화점 사상점 일원)"
+    },
+    {
+      "description": "감전동·학장동 일대에 형성된 부산 최대 규모의 공업단지로, 신발·기계·금속 등 부산 제조업의 산실이자 사상구의 산업 정체성을 상징하는 곳이다.",
+      "name": "사상공업지역"
+    },
+    {
+      "description": "괘법동에 자리한 대규모 산업용품 전문 유통단지로, 공구·기계부품·산업자재 상가가 밀집해 서부산 물류·유통의 거점을 이룬다.",
+      "name": "부산산업용품유통단지"
+    }
+  ],
+  "nature_rest": [
+    {
+      "description": "해발 496m 승학산 정상 일대에 드넓게 펼쳐진 억새 군락지로, 가을이면 은빛 물결을 이뤄 부산의 대표 억새 명소이자 가족 등반 코스로 사랑받는다.",
+      "name": "승학산 억새밭"
+    },
+    {
+      "description": "낙동강 둔치의 습지와 갈대밭을 살린 생태 학습장으로, 철새와 야생화를 관찰하며 강바람을 맞을 수 있는 도심 속 자연 쉼터다.",
+      "name": "삼락생태공원 습지생태원"
+    },
+    {
+      "description": "구의 동쪽 경계를 이루는 백양산으로 이어지는 산길로, 운수사와 삼림욕장을 지나며 사상 시가지와 낙동강을 조망할 수 있는 산책·등산 코스다.",
+      "name": "백양산 등산로"
+    },
+    {
+      "description": "삼락생태공원을 따라 이어지는 낙동강 종주 자전거길 구간으로, 강변 평지를 달리며 라이딩과 산책을 즐길 수 있는 인기 코스다.",
+      "name": "낙동강 자전거길(삼락 구간)"
+    },
+    {
+      "description": "구 남쪽을 감싸는 구덕산과 승학산을 잇는 능선 산책로로, 도심과 낙동강 하구를 한눈에 내려다볼 수 있는 조망 명소다.",
+      "name": "구덕산·승학산 능선길"
+    }
+  ],
+  "org_slug": "kr-busan-sasang",
+  "sido": "부산광역시",
+  "sigungu": "사상구",
+  "symbols": {
+    "bird": "까치",
+    "flower": "철쭉꽃",
+    "tree": "소나무"
+  },
+  "transport": "사상구는 서부산 최대의 교통 결절지로, 부산 도시철도 2호선이 주례역·감전역·사상역·덕포역·모덕역·모라역을 지나며 구를 남북으로 관통합니다. 사상역에서는 2호선과 부산김해경전철이 만나 김해·김해공항 방면으로 환승할 수 있고, 경전철은 괘법르네시떼역을 지나 서부산 상권과 이어집니다. 개통이 추진되는 도시철도 5호선(사상~하단선)이 사상역을 기점으로 계획되어 향후 환승 요충지로서의 위상이 더욱 커질 전망입니다. 철도로는 경부선 사상역이 있으며, 괘법동의 부산서부시외버스터미널이 영·호남과 수도권을 잇는 시외버스 관문 역할을 합니다. 도로 교통은 남해고속도로제2지선과 중앙고속도로가 구를 지나 강서·김해 방면 광역 이동이 편리합니다."
+}
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="eyebrow">부산광역시</p>
-      <h1>사상구</h1>
-    </header>
-    <div class="content">
-      <section id="intro">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root{
+  --steel:#708090;
+  --steel-d:#4a5560;
+  --steel-l:#8b98a6;
+  --ggreen:#00FF00;
+  --oil:#1a1f24;
+  --plate:#20262d;
+  --rivet:#3a4249;
+}
+
+#sasang-works *{box-sizing:border-box;}
+#sasang-works{
+  font-family:'Noto Sans KR','철도청체',system-ui,sans-serif;
+  color:#d6dde3;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 39px,rgba(0,0,0,.18) 39px 40px),
+    repeating-linear-gradient(0deg,transparent 0 39px,rgba(0,0,0,.18) 39px 40px),
+    radial-gradient(circle at 30% 12%,#2a323a,#151a1f 70%);
+  border:2px solid var(--steel-d);
+  border-radius:6px;
+  overflow:hidden;
+  position:relative;
+  line-height:1.7;
+}
+#sasang-works::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(circle at 14px 14px,rgba(255,255,255,.05) 1.5px,transparent 2px);
+  background-size:120px 120px;opacity:.6;
+}
+
+/* ===== HEADER / MACHINE PLATE ===== */
+.sw-plate{
+  position:relative;z-index:2;
+  padding:26px 24px 18px;
+  border-bottom:2px solid var(--steel-d);
+  background:linear-gradient(180deg,rgba(112,128,144,.14),transparent);
+}
+.sw-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Black Ops One',cursive;
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ggreen);
+  border:1px solid rgba(0,255,0,.4);
+  padding:5px 12px;border-radius:3px;
+  background:rgba(0,255,0,.05);
+}
+.sw-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--ggreen);
+  box-shadow:0 0 8px var(--ggreen);animation:sw-blink 2.4s steps(1) infinite;}
+@keyframes sw-blink{0%,70%{opacity:1}71%,100%{opacity:.25}}
+.sw-title{
+  font-family:'Black Ops One',cursive;
+  font-size:clamp(30px,6vw,54px);line-height:1.02;
+  margin:14px 0 6px;color:#eef3f6;
+  text-shadow:0 2px 0 var(--steel-d),0 0 22px rgba(112,128,144,.4);
+}
+.sw-title b{color:var(--ggreen);text-shadow:0 0 16px rgba(0,255,0,.55);}
+.sw-sub{font-size:14px;color:var(--steel-l);letter-spacing:.04em;max-width:60ch;}
+.sw-slug{font-family:'Black Ops One',cursive;font-size:11px;color:var(--rivet);
+  letter-spacing:.2em;margin-top:8px;}
+
+/* ===== GEAR CONSOLE ===== */
+.sw-console{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:270px 1fr;gap:0;
+  min-height:520px;
+}
+@media(max-width:760px){.sw-console{grid-template-columns:1fr;}}
+
+.sw-gearbox{
+  position:relative;
+  border-right:2px solid var(--steel-d);
+  padding:20px 14px;
+  background:
+    repeating-linear-gradient(45deg,rgba(0,0,0,.12) 0 8px,transparent 8px 16px),
+    var(--oil);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+@media(max-width:760px){.sw-gearbox{border-right:none;border-bottom:2px solid var(--steel-d);}}
+
+.sw-gearsvg{width:100%;max-width:250px;touch-action:none;cursor:grab;user-select:none;}
+.sw-gearsvg:active{cursor:grabbing;}
+
+.sw-readout{
+  width:100%;margin-top:4px;padding:10px 12px;
+  border:1px solid var(--steel-d);border-radius:4px;
+  background:rgba(0,0,0,.35);
+}
+.sw-readout .lbl{font-family:'Black Ops One',cursive;font-size:9px;letter-spacing:.2em;
+  color:var(--steel-l);text-transform:uppercase;}
+.sw-readout .val{font-family:'Black Ops One',cursive;font-size:16px;color:var(--ggreen);
+  text-shadow:0 0 10px rgba(0,255,0,.5);margin-top:2px;min-height:20px;}
+.sw-rpm{display:flex;justify-content:space-between;align-items:center;margin-top:8px;
+  font-size:10px;color:var(--steel-l);}
+.sw-rpm .bar{flex:1;height:5px;margin:0 8px;background:var(--rivet);border-radius:3px;overflow:hidden;}
+.sw-rpm .bar i{display:block;height:100%;width:0;background:var(--ggreen);transition:width .12s linear;}
+
+.sw-hint{font-size:10.5px;color:var(--rivet);text-align:center;line-height:1.5;letter-spacing:.02em;}
+.sw-hint b{color:var(--steel-l);}
+
+/* ===== VIEWPORT / ROTATING PANEL ===== */
+.sw-viewport{
+  position:relative;overflow:hidden;
+  padding:22px;
+  perspective:1400px;
+}
+.sw-stage{position:relative;min-height:440px;}
+.sw-panel{
+  transition:opacity .45s ease, transform .5s cubic-bezier(.22,.61,.36,1);
+}
+
+/* progressive-enhancement default: readable scroll list */
+.sw-nojs-note{
+  font-family:'Black Ops One',cursive;font-size:10px;letter-spacing:.18em;
+  color:var(--rivet);text-transform:uppercase;margin-bottom:12px;
+}
+
+/* section styling injected into       <section id="intro">
+        <h2>지역 소개</h2>
+        <p>사상구(沙上區)는 낙동강 하류 동안에 형성된 넓은 모래벌 위에 자리 잡아 &#x27;모래 위&#x27;라는 뜻의 지명을 얻은 부산의 대표적 산업·물류 거점입니다. 감전동·학장동·괘법동 일대에 부산 최대 규모의 사상공업지역이 펼쳐져 있고, 부산산업용품유통단지와 서부시외버스터미널이 서부산의 관문 역할을 맡고 있습니다. 도시철도 2호선과 부산김해경전철이 교차하는 사상역을 중심으로 사람과 물자가 모여드는 교통 결절지이기도 합니다. 한편으로는 낙동강변 삼락생태공원과 승학산 억새밭이 공장지대 옆에서 도시민에게 넉넉한 쉼터를 내어 주는 이중의 매력을 지닌 고장입니다. 옛 사상나루와 강선대 당산 신앙이 남아 강과 함께 살아온 주민들의 삶을 오늘까지 전하고 있습니다.</p>
+      </section>
+      <section id="facts">
+        <h2>주요 통계</h2>
+        <ul class="facts">
+          <li>인구: 약 199,070명 (2024)</li>
+          <li>면적: 36.06 km²</li>
+          <li>신설: 1995년 3월 1일</li>
+        </ul>
+      </section>
+      <section id="history">
+        <h2>역사</h2>
+        <p>사상 지역은 삼한시대 변한 거칠산국의 터전이었고 가야와 신라를 거치며 동래 사천면(沙川面)의 일부로 편제되었습니다. &#x27;사상&#x27;이라는 이름은 모래내(沙川)의 위쪽 지역, 즉 사천면 상단이라는 뜻에서 비롯되었으며 1914년 행정구역 개편 때 동래군 사상면으로 자리 잡았습니다. 낙동강 하구의 나루터인 사상나루는 김해·구포와 부산을 잇는 뱃길 요지로 오랫동안 번성했고, 강 건너 마을과의 왕래가 활발했습니다. 1963년 부산시 동래구에 편입되었다가 1975년 북부출장소, 1978년 북구 설치를 거쳐 성장했습니다. 1970년대부터 낙동강변 저지대에 사상공업지역이 대규모로 조성되면서 인구와 공장이 폭발적으로 늘어났습니다. 마침내 1995년 3월 1일 북구에서 분리·승격되어 오늘의 사상구가 출범했습니다.</p>
+      </section>
+      <section id="geography">
+        <h2>지리·자연환경</h2>
+        <p>사상구는 부산 서부, 낙동강 본류가 남으로 흐르는 동안(東岸)의 충적 평야 위에 자리하며 서쪽으로 강 건너 강서구, 북쪽으로 북구, 동쪽으로 백양산 능선을 사이에 두고 부산진구와 접합니다. 남쪽에는 해발 496m의 승학산과 구덕산 자락이 병풍처럼 구를 감싸 산과 강 사이의 좁고 긴 저지대라는 독특한 지형을 이룹니다. 낙동강이 오랜 세월 실어 나른 모래와 흙이 쌓여 삼락동을 비롯한 넓은 강변 둔치와 습지가 발달했고, 이 일대가 삼락생태공원으로 조성되어 있습니다. 구를 관통하던 옛 물길과 모래벌은 &#x27;사상(모래 위)&#x27;이라는 지명의 근거가 되었으며 지금도 강변 저지대의 흔적이 곳곳에 남아 있습니다. 가장 넓은 동은 강변 둔치를 낀 삼락동이고 가장 좁은 동은 도심 밀집지역인 덕포1동으로, 자연 지형과 시가지가 뚜렷이 대비됩니다.</p>
+      </section>
+      <section id="characteristics">
+        <h2>지역 특징</h2>
+        <p>사상구는 약 20만 명이 거주하는 부산의 대표적 공업·물류 자치구로, 감전동을 중심으로 괘법동·덕포동·학장동에 걸쳐 부산 최대 규모의 사상공업지역이 자리합니다. 신발·기계·자동차부품·금속가공 등 부산 제조업의 뿌리가 이곳에 집중되어 있어 &#x27;부산 산업의 심장&#x27;으로 불려 왔습니다. 괘법동에는 부산산업용품유통단지와 이마트·홈플러스·르네시떼 같은 대형 유통시설이 몰려 서부산 상권의 중심을 이룹니다. 서부시외버스터미널이 영·호남과 수도권을 잇는 관문이어서 유동인구가 많고, 근래에는 노후 공업지역을 첨단산업·주거 복합으로 재생하는 도시재생 사업이 활발히 추진되고 있습니다. 공장과 물류로 상징되는 산업도시이면서도 낙동강 생태공원과 억새 명산을 함께 품은 점이 사상구만의 성격입니다.</p>
+      </section>
+      <section id="landmarks">
+        <h2>대표 명소</h2>
+        <ul>
+          <li><strong>삼락생태공원</strong> — 낙동강변 둔치에 조성된 472만여 ㎡ 규모의 부산 최대 강변공원으로, 야생화단지·연꽃단지·습지생태원과 자전거길·지압도로가 어우러진 사상의 대표 나들이 명소다.</li>
+          <li><strong>부산서부시외버스터미널</strong> — 괘법동에 있는 서부산의 관문 터미널로 영·호남과 수도권을 잇는 시외버스가 오가며, 도시철도 2호선·경전철 사상역과 이어져 교통 결절지 역할을 한다.</li>
+          <li><strong>사상 르네시떼(NC백화점 사상점 일원)</strong> — 괘법동 경전철 르네시떼역과 연결된 복합쇼핑·문화 시설로, 서부산 도심 상권의 랜드마크이자 시민들의 만남과 쇼핑 공간이다.</li>
+          <li><strong>사상공업지역</strong> — 감전동·학장동 일대에 형성된 부산 최대 규모의 공업단지로, 신발·기계·금속 등 부산 제조업의 산실이자 사상구의 산업 정체성을 상징하는 곳이다.</li>
+          <li><strong>부산산업용품유통단지</strong> — 괘법동에 자리한 대규모 산업용품 전문 유통단지로, 공구·기계부품·산업자재 상가가 밀집해 서부산 물류·유통의 거점을 이룬다.</li>
+        </ul>
+      </section>
+      <section id="heritage">
+        <h2>문화유산·문화시설</h2>
+        <ul>
+          <li><strong>운수사 대웅전</strong> — 백양산 자락 운수사에 있는 부산에서 가장 오래된 목조건축으로, 임진왜란 때 소실된 뒤 인조 25년(1647) 착공해 효종 6년(1655)에 완공된 주심포계 맞배집이다. 보물로 지정된 조선 전기 불전 건축의 귀중한 유산이다.</li>
+          <li><strong>강선대(降仙臺)</strong> — 덕포동의 상강선대(할배당산)와 하강선대(할매당산)로 나뉜 당산으로, 1700년경 당집을 세워 낙동강변 마을의 풍년과 안녕을 빌어 온 주민 신앙의 상징이다.</li>
+          <li><strong>사상생활사박물관</strong> — 삼락동에 자리한 생활사 박물관으로, 사상의 옛 나루터·공업지역 형성과 주민들의 생활 변천사를 전시해 지역 정체성을 보존·공유하는 문화공간이다.</li>
+          <li><strong>사상강변축제</strong> — 삼락생태공원 일원 낙동강변을 무대로 열리는 사상구 대표 축제로, 로컬 문화예술 공연과 시민 참여 프로그램이 어우러지는 여름철 강변 문화행사다.</li>
+          <li><strong>사상인디스테이션</strong> — 인디 뮤지션과 지역 청년 예술가들의 공연·연습 공간으로, 사상의 산업지역에 문화 활력을 불어넣는 생활문화 거점이다.</li>
+        </ul>
+      </section>
+      <section id="nature">
+        <h2>자연·휴식</h2>
+        <ul>
+          <li><strong>승학산 억새밭</strong> — 해발 496m 승학산 정상 일대에 드넓게 펼쳐진 억새 군락지로, 가을이면 은빛 물결을 이뤄 부산의 대표 억새 명소이자 가족 등반 코스로 사랑받는다.</li>
+          <li><strong>삼락생태공원 습지생태원</strong> — 낙동강 둔치의 습지와 갈대밭을 살린 생태 학습장으로, 철새와 야생화를 관찰하며 강바람을 맞을 수 있는 도심 속 자연 쉼터다.</li>
+          <li><strong>백양산 등산로</strong> — 구의 동쪽 경계를 이루는 백양산으로 이어지는 산길로, 운수사와 삼림욕장을 지나며 사상 시가지와 낙동강을 조망할 수 있는 산책·등산 코스다.</li>
+          <li><strong>낙동강 자전거길(삼락 구간)</strong> — 삼락생태공원을 따라 이어지는 낙동강 종주 자전거길 구간으로, 강변 평지를 달리며 라이딩과 산책을 즐길 수 있는 인기 코스다.</li>
+          <li><strong>구덕산·승학산 능선길</strong> — 구 남쪽을 감싸는 구덕산과 승학산을 잇는 능선 산책로로, 도심과 낙동강 하구를 한눈에 내려다볼 수 있는 조망 명소다.</li>
+        </ul>
+      </section>
+      <section id="transport">
+        <h2>교통</h2>
+        <p>사상구는 서부산 최대의 교통 결절지로, 부산 도시철도 2호선이 주례역·감전역·사상역·덕포역·모덕역·모라역을 지나며 구를 남북으로 관통합니다. 사상역에서는 2호선과 부산김해경전철이 만나 김해·김해공항 방면으로 환승할 수 있고, 경전철은 괘법르네시떼역을 지나 서부산 상권과 이어집니다. 개통이 추진되는 도시철도 5호선(사상~하단선)이 사상역을 기점으로 계획되어 향후 환승 요충지로서의 위상이 더욱 커질 전망입니다. 철도로는 경부선 사상역이 있으며, 괘법동의 부산서부시외버스터미널이 영·호남과 수도권을 잇는 시외버스 관문 역할을 합니다. 도로 교통은 남해고속도로제2지선과 중앙고속도로가 구를 지나 강서·김해 방면 광역 이동이 편리합니다.</p>
+      </section>
+      <section id="symbols">
+        <h2>지역 상징</h2>
+        <ul class="symbols">
+          <li>구화(꽃): 철쭉꽃</li>
+          <li>구목(나무): 소나무</li>
+          <li>구조(새): 까치</li>
+        </ul>
+      </section>
+      <section id="faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary>사상구의 지명 &#x27;사상&#x27;은 무슨 뜻인가요?</summary>
+            <p>&#x27;사상(沙上)&#x27;은 &#x27;모래 위&#x27;라는 뜻으로, 낙동강이 실어 나른 모래벌 위에 마을이 들어섰고 옛 사천면(모래내)의 위쪽 지역이라는 데서 유래했습니다.</p>
+          </details>
+          <details>
+            <summary>사상구청은 어디에 있나요?</summary>
+            <p>부산광역시 사상구 학감대로 242(감전동)에 있으며, 도시철도 2호선 감전역·사상역에서 가깝습니다.</p>
+          </details>
+          <details>
+            <summary>사상구를 대표하는 명소는 어디인가요?</summary>
+            <p>낙동강변의 삼락생태공원과 가을 억새로 유명한 승학산, 부산에서 가장 오래된 목조건축인 운수사 대웅전이 대표 명소로 꼽힙니다.</p>
+          </details>
+          <details>
+            <summary>사상역이 교통 요지로 불리는 이유는 무엇인가요?</summary>
+            <p>도시철도 2호선과 부산김해경전철이 만나고, 계획 중인 5호선의 기점이자 경부선 철도와 서부시외버스터미널이 인접해 서부산의 환승 중심지이기 때문입니다.</p>
+          </details>
+          <details>
+            <summary>사상구는 어떤 산업으로 유명한가요?</summary>
+            <p>감전동·학장동 일대의 사상공업지역은 부산 최대 규모로, 신발·기계·자동차부품·금속가공 등 부산 제조업의 중심지 역할을 합니다.</p>
+          </details>
+          <details>
+            <summary>승학산 억새는 언제 보러 가면 좋나요?</summary>
+            <p>승학산 정상의 억새밭은 가을(10~11월)에 은빛으로 절정을 이루며, 가족 단위 등반 코스로 인기가 높습니다.</p>
+          </details>
+        </div>
+      </section>
+      <section id="links">
+        <h2>공식 링크</h2>
+        <ul>
+          <li><a href="https://www.sasang.go.kr/" rel="noopener">부산광역시 사상구청</a></li>
+          <li><a href="https://www.sasang.go.kr/tour/index.sasang" rel="noopener">사상구 문화관광</a></li>
+        </ul>
+      </section>
+      <section id="sources">
+        <h2>출처</h2>
+        <ul class="sources">
+          <li><a href="https://ko.wikipedia.org/wiki/%EC%82%AC%EC%83%81%EA%B5%AC" rel="noopener">사상구 - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.sasang.go.kr/tour/index.sasang?menuCd=DOM_000000601001000000" rel="noopener">부산광역시 사상구청 문화관광</a> (조회 2026-07-08)</li>
+          <li><a href="https://encykorea.aks.ac.kr/Article/E0076950" rel="noopener">부산 운수사 대웅전 - 한국민족문화대백과사전</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.busan.go.kr/nakdong/samrakpark01" rel="noopener">삼락생태공원 - 부산광역시 낙동강관리본부</a> (조회 2026-07-08)</li>
+        </ul>
+      </section> */
+#sw-content section{
+  scroll-margin-top:20px;
+  border-left:3px solid var(--steel);
+  padding:4px 0 22px 18px;margin:0 0 14px;
+  position:relative;
+}
+#sw-content section::before{
+  content:"";position:absolute;left:-8px;top:6px;width:11px;height:11px;
+  border-radius:50%;background:var(--steel);
+  box-shadow:0 0 0 3px var(--oil),0 0 0 4px var(--steel-d);
+}
+#sw-content section.sw-lit{border-left-color:var(--ggreen);}
+#sw-content section.sw-lit::before{background:var(--ggreen);box-shadow:0 0 0 3px var(--oil),0 0 10px var(--ggreen);}
+#sw-content h2{
+  font-family:'Black Ops One',cursive;font-weight:400;
+  font-size:19px;color:#eef3f6;margin:0 0 8px;letter-spacing:.01em;
+}
+#sw-content section.sw-lit h2{color:var(--ggreen);text-shadow:0 0 12px rgba(0,255,0,.35);}
+#sw-content h3{font-family:'Black Ops One',cursive;font-weight:400;font-size:15px;color:var(--steel-l);margin:14px 0 6px;}
+#sw-content p{margin:0 0 10px;color:#c4cdd4;font-size:14.5px;}
+#sw-content ul{margin:0 0 10px;padding-left:20px;}
+#sw-content li{margin:3px 0;color:#c4cdd4;font-size:14px;}
+#sw-content a{color:var(--ggreen);text-decoration:none;border-bottom:1px dotted rgba(0,255,0,.4);}
+#sw-content a:hover{border-bottom-style:solid;}
+
+/* facts as gauge cards */
+#sw-content .facts{list-style:none;padding-left:0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;}
+#sw-content .facts li{
+  background:rgba(112,128,144,.1);border:1px solid var(--steel-d);
+  border-radius:4px;padding:9px 12px;font-size:13px;position:relative;
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);
+}
+#sw-content .facts li::marker{content:none;}
+
+/* symbols */
+#sw-content .symbols{list-style:none;padding-left:0;display:flex;flex-wrap:wrap;gap:8px;}
+#sw-content .symbols li{
+  border:1px solid var(--steel);border-radius:3px;padding:6px 12px;font-size:13px;
+  background:rgba(0,255,0,.04);
+}
+
+/* faq details/summary */
+#sw-content .faq details{
+  border:1px solid var(--steel-d);border-radius:4px;margin:0 0 8px;
+  background:rgba(0,0,0,.25);overflow:hidden;
+}
+#sw-content .faq summary{
+  cursor:pointer;padding:11px 14px;font-family:'Black Ops One',cursive;
+  font-size:13px;color:#dbe2e8;list-style:none;position:relative;padding-right:38px;
+}
+#sw-content .faq summary::-webkit-details-marker{display:none;}
+#sw-content .faq summary::after{
+  content:"◷";position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  color:var(--steel);transition:transform .3s;
+}
+#sw-content .faq details[open] summary::after{transform:translateY(-50%) rotate(180deg);color:var(--ggreen);}
+#sw-content .faq details[open] summary{color:var(--ggreen);}
+#sw-content .faq details > *:not(summary){padding:0 14px 12px;font-size:14px;color:#c4cdd4;}
+
+/* landmark/heritage/nature cards inside sections */
+#sw-content .sw-cards{list-style:none;padding-left:0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;}
+#sw-content .sw-cards li{
+  border:1px solid var(--steel-d);border-radius:4px;padding:10px 12px;
+  background:rgba(112,128,144,.08);font-size:13.5px;
+}
+
+/* enhanced tab rail (JS on) */
+.sw-rail{display:none;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.sw-rail.on{display:flex;}
+.sw-cog{
+  font-family:'Black Ops One',cursive;font-size:10px;letter-spacing:.1em;
+  color:var(--steel-l);background:rgba(0,0,0,.3);
+  border:1px solid var(--steel-d);border-radius:3px;padding:5px 9px;cursor:pointer;
+  text-transform:uppercase;transition:all .2s;
+}
+.sw-cog:hover{border-color:var(--steel-l);color:#eef3f6;}
+.sw-cog.act{background:rgba(0,255,0,.1);border-color:var(--ggreen);color:var(--ggreen);}
+
+.sw-foot{
+  position:relative;z-index:2;text-align:center;padding:14px;
+  border-top:2px solid var(--steel-d);
+  font-family:'Black Ops One',cursive;font-size:9px;letter-spacing:.24em;
+  color:var(--rivet);text-transform:uppercase;
+}
+.sw-foot b{color:var(--steel);}
+
+@media(prefers-reduced-motion:reduce){
+  .sw-panel,#sasang-works *{animation:none!important;transition:none!important;}
+}
+</style>
+
+<div id="sasang-works">
+
+  <div class="sw-plate">
+    <span class="sw-badge"><span class="dot" aria-hidden="true"></span>사상공업 · 낙동강 서벨트</span>
+    <h1 class="sw-title">부산광역시 <b>사상구</b></h1>
+    <p class="sw-sub">사상구(沙上區)는 낙동강 하류 동안에 형성된 넓은 모래벌 위에 자리 잡아 &#x27;모래 위&#x27;라는 뜻의 지명을 얻은 부산의 대표적 산업·물류 거점입니다. 감전동·학장동·괘법동 일대에 부산 최대 규모의 사상공업지역이 펼쳐져 있고, 부산산업용품유통단지와 서부시외버스터미널이 서부산의 관문 역할을 맡고 있습니다. 도시철도 2호선과 부산김해경전철이 교차하는 사상역을 중심으로 사람과 물자가 모여드는 교통 결절지이기도 합니다. 한편으로는 낙동강변 삼락생태공원과 승학산 억새밭이 공장지대 옆에서 도시민에게 넉넉한 쉼터를 내어 주는 이중의 매력을 지닌 고장입니다. 옛 사상나루와 강선대 당산 신앙이 남아 강과 함께 살아온 주민들의 삶을 오늘까지 전하고 있습니다.</p>
+    <p class="sw-slug">UNIT // kr-busan-sasang</p>
+  </div>
+
+  <div class="sw-console">
+
+    <aside class="sw-gearbox">
+      <svg class="sw-gearsvg" id="sw-gears" viewBox="0 0 250 250" aria-hidden="true">
+        <defs>
+          <radialGradient id="swg" cx="45%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#8b98a6"/>
+            <stop offset="60%" stop-color="#708090"/>
+            <stop offset="100%" stop-color="#4a5560"/>
+          </radialGradient>
+        </defs>
+        <g id="gearA" transform="translate(88,92)"></g>
+        <g id="gearB" transform="translate(178,120)"></g>
+        <g id="gearC" transform="translate(96,182)"></g>
+      </svg>
+
+      <div class="sw-readout">
+        <div class="lbl">현재 섹션 / SECTION</div>
+        <div class="val" id="sw-current">— 대기중 —</div>
+        <div class="sw-rpm"><span>RPM</span><span class="bar"><i id="sw-rpmbar"></i></span><span id="sw-rpmval">0</span></div>
+      </div>
+
+      <p class="sw-hint">톱니를 <b>드래그</b>하거나 <b>클릭</b>해 돌리세요.<br>맞물린 기어가 패널을 회전시켜<br>다음 섹션을 노출합니다.</p>
+    </aside>
+
+    <div class="sw-viewport">
+      <div class="sw-rail" id="sw-rail"></div>
+      <div class="sw-stage">
+        <div class="sw-panel" id="sw-panel">
+          <div id="sw-content">
+            <p class="sw-nojs-note">▶ 사상 자료 콘솔 — 전 섹션 표시중</p>
+                  <section id="intro">
         <h2>지역 소개</h2>
         <p>사상구(沙上區)는 낙동강 하류 동안에 형성된 넓은 모래벌 위에 자리 잡아 &#x27;모래 위&#x27;라는 뜻의 지명을 얻은 부산의 대표적 산업·물류 거점입니다. 감전동·학장동·괘법동 일대에 부산 최대 규모의 사상공업지역이 펼쳐져 있고, 부산산업용품유통단지와 서부시외버스터미널이 서부산의 관문 역할을 맡고 있습니다. 도시철도 2호선과 부산김해경전철이 교차하는 사상역을 중심으로 사람과 물자가 모여드는 교통 결절지이기도 합니다. 한편으로는 낙동강변 삼락생태공원과 승학산 억새밭이 공장지대 옆에서 도시민에게 넉넉한 쉼터를 내어 주는 이중의 매력을 지닌 고장입니다. 옛 사상나루와 강선대 당산 신앙이 남아 강과 함께 살아온 주민들의 삶을 오늘까지 전하고 있습니다.</p>
       </section>
@@ -261,10 +712,216 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
           <li><a href="https://www.busan.go.kr/nakdong/samrakpark01" rel="noopener">삼락생태공원 - 부산광역시 낙동강관리본부</a> (조회 2026-07-08)</li>
         </ul>
       </section>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer>
-      <p>이 페이지는 공개 자료를 바탕으로 작성된 사상구 지역 정보 페이지입니다.</p>
-    </footer>
-  </main>
+
+  </div>
+
+  <div class="sw-foot"><b>SASANG</b> INDUSTRIAL GAZETTEER · https://kr-busan-sasang.github.io/</div>
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('sasang-works');
+  if(!root)return;
+
+  /* ---------- build gear teeth (clip-path style paths) ---------- */
+  function gearPath(teeth,rOut,rIn,hub){
+    var p='',step=Math.PI/teeth;
+    for(var i=0;i<teeth*2;i++){
+      var r=(i%2===0)?rOut:rIn;
+      var a=i*step;
+      var x=Math.cos(a)*r, y=Math.sin(a)*r;
+      p+=(i===0?'M':'L')+x.toFixed(1)+' '+y.toFixed(1);
+    }
+    p+='Z';
+    return p;
+  }
+  function buildGear(id,teeth,rOut,rIn,hub){
+    var g=document.getElementById(id);
+    if(!g)return;
+    var d=gearPath(teeth,rOut,rIn);
+    g.innerHTML=
+      '<path d="'+d+'" fill="url(#swg)" stroke="#3a4249" stroke-width="2"/>'+
+      '<circle r="'+(rIn*0.62)+'" fill="#20262d" stroke="#4a5560" stroke-width="2"/>'+
+      '<circle r="'+hub+'" fill="#1a1f24" stroke="#708090" stroke-width="2"/>'+
+      '<circle r="3.4" fill="#00FF00"/>'+
+      '<g stroke="#3a4249" stroke-width="2">'+
+        '<line x1="'+hub+'" y1="0" x2="'+(rIn*0.62)+'" y2="0"/>'+
+        '<line x1="0" y1="'+hub+'" x2="0" y2="'+(rIn*0.62)+'"/>'+
+        '<line x1="-'+hub+'" y1="0" x2="-'+(rIn*0.62)+'" y2="0"/>'+
+        '<line x1="0" y1="-'+hub+'" x2="0" y2="-'+(rIn*0.62)+'"/>'+
+      '</g>';
+  }
+  buildGear('gearA',14,60,46,15);
+  buildGear('gearB',10,42,31,11);
+  buildGear('gearC',12,50,38,13);
+
+  var gA=document.getElementById('gearA'),
+      gB=document.getElementById('gearB'),
+      gC=document.getElementById('gearC');
+
+  /* ---------- gather sections ---------- */
+  var sections=[].slice.call(document.querySelectorAll('#sw-content section'));
+  var rail=document.getElementById('sw-rail');
+  var panel=document.getElementById('sw-panel');
+  var current=document.getElementById('sw-current');
+  var rpmbar=document.getElementById('sw-rpmbar');
+  var rpmval=document.getElementById('sw-rpmval');
+
+  if(!sections.length)return;
+
+  /* label helper from region-data if present */
+  var titleMap={intro:'지역 소개',facts:'기본 정보',history:'역사',geography:'지리',
+    characteristics:'지역 특성',landmarks:'명소',heritage:'문화유산',nature:'자연·휴식',
+    transport:'교통',symbols:'상징',faq:'자주묻는질문',links:'관련 링크',sources:'출처'};
+
+  /* build enhanced rail */
+  sections.forEach(function(sec,i){
+    var id=sec.id||('sec'+i);
+    var h=sec.querySelector('h2');
+    var lbl=(h?h.textContent:titleMap[id]||id).trim();
+    sec.setAttribute('data-idx',i);
+    var b=document.createElement('button');
+    b.className='sw-cog';
+    b.type='button';
+    b.textContent=(i+1<10?'0':'')+(i+1)+' '+lbl;
+    b.addEventListener('click',function(){ goTo(i,true); });
+    rail.appendChild(b);
+  });
+  rail.classList.add('on');
+
+  /* JS is on: switch note + apply card styling to list-heavy sections */
+  var note=document.querySelector('.sw-nojs-note');
+  if(note)note.textContent='▶ 기어 구동 콘솔 · ONLINE — 톱니를 돌려 섹션 이동';
+
+  ['landmarks','heritage','nature','links'].forEach(function(id){
+    var s=document.getElementById(id); if(s){var ul=s.querySelector('ul'); if(ul)ul.classList.add('sw-cards');}
+  });
+
+  var cogs=[].slice.call(rail.children);
+  var idx=0, N=sections.length;
+  var angle=0;               // accumulated drive angle (deg)
+  var DEG_PER_SECTION=360/N; // one full turn cycles all sections
+  var lastRpmT=0, rpmDecay;
+
+  function render(){
+    sections.forEach(function(sec,i){
+      var lit=(i===idx);
+      sec.classList.toggle('sw-lit',lit);
+      sec.style.display=lit?'block':'none';
+    });
+    cogs.forEach(function(c,i){ c.classList.toggle('act',i===idx); });
+    var h=sections[idx].querySelector('h2');
+    current.textContent=(h?h.textContent:'섹션 '+(idx+1)).trim();
+    // panel entrance rotation
+    panel.style.transform='rotateY(0deg)';
+  }
+
+  function spinPanel(dir){
+    panel.style.transition='none';
+    panel.style.opacity='.15';
+    panel.style.transform='rotateY('+(dir*35)+'deg)';
+    // force reflow
+    void panel.offsetWidth;
+    panel.style.transition='opacity .45s ease, transform .5s cubic-bezier(.22,.61,.36,1)';
+    panel.style.opacity='1';
+    panel.style.transform='rotateY(0deg)';
+  }
+
+  function goTo(i,fromClick){
+    i=((i%N)+N)%N;
+    if(i===idx && !fromClick)return;
+    var dir=(i>idx)?1:-1;
+    if(i===idx)dir=1;
+    idx=i;
+    render();
+    spinPanel(dir);
+    bumpRpm();
+  }
+
+  function applyRotation(){
+    gA.setAttribute('transform','translate(88,92) rotate('+angle+')');
+    // meshed gears counter-rotate at gear-ratio; B smaller so faster
+    gB.setAttribute('transform','translate(178,120) rotate('+(-angle*1.4)+')');
+    gC.setAttribute('transform','translate(96,182) rotate('+(-angle*1.16)+')');
+  }
+
+  function bumpRpm(){
+    var v=Math.min(100,parseFloat(rpmbar.style.width||0)+60);
+    setRpm(v);
+    clearTimeout(rpmDecay);
+    rpmDecay=setTimeout(function decay(){
+      var cur=parseFloat(rpmbar.style.width||0);
+      if(cur>0){setRpm(cur-8); rpmDecay=setTimeout(decay,90);}
+    },220);
+  }
+  function setRpm(v){v=Math.max(0,Math.min(100,v));rpmbar.style.width=v+'%';rpmval.textContent=Math.round(v*24);}
+
+  /* ---------- drag / click rotation ---------- */
+  var svg=document.getElementById('sw-gears');
+  var dragging=false, lastAng=0, accum=0, moved=false;
+
+  function pointAngle(e){
+    var r=svg.getBoundingClientRect();
+    var cx=r.left+r.width*(88/250), cy=r.top+r.height*(92/250);
+    var px=(e.touches?e.touches[0].clientX:e.clientX);
+    var py=(e.touches?e.touches[0].clientY:e.clientY);
+    return Math.atan2(py-cy,px-cx)*180/Math.PI;
+  }
+  function down(e){
+    dragging=true;moved=false;
+    lastAng=pointAngle(e);accum=0;
+    e.preventDefault();
+  }
+  function move(e){
+    if(!dragging)return;
+    var a=pointAngle(e);
+    var d=a-lastAng;
+    if(d>180)d-=360; if(d<-180)d+=360;
+    lastAng=a;
+    angle+=d; accum+=d;
+    applyRotation();
+    bumpRpm();
+    if(Math.abs(accum)>=DEG_PER_SECTION){
+      var steps=Math.trunc(accum/DEG_PER_SECTION);
+      accum-=steps*DEG_PER_SECTION;
+      goTo(idx+steps,false);
+      moved=true;
+    }
+    e.preventDefault();
+  }
+  function up(e){
+    if(!dragging)return;
+    dragging=false;
+    if(!moved){ // treat as click = advance one tooth-notch
+      angle+=DEG_PER_SECTION;
+      applyRotation();
+      goTo(idx+1,false);
+    }
+  }
+
+  svg.addEventListener('mousedown',down);
+  window.addEventListener('mousemove',move);
+  window.addEventListener('mouseup',up);
+  svg.addEventListener('touchstart',down,{passive:false});
+  window.addEventListener('touchmove',move,{passive:false});
+  window.addEventListener('touchend',up);
+
+  /* keyboard access */
+  svg.setAttribute('tabindex','0');
+  svg.setAttribute('role','slider');
+  svg.setAttribute('aria-label','섹션 기어 — 좌우 화살표로 이동');
+  svg.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='ArrowDown'){angle+=DEG_PER_SECTION;applyRotation();goTo(idx+1,false);e.preventDefault();}
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp'){angle-=DEG_PER_SECTION;applyRotation();goTo(idx-1,false);e.preventDefault();}
+  });
+
+  render();
+  applyRotation();
+})();
+</script>
 </body>
 </html>
